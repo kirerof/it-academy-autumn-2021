@@ -4,29 +4,29 @@ import sys
 from time import localtime
 
 
-# 1
+"""1 line: Output"""
 print('Hello, world!')
 
 
-# 2
+"""2 lines: Input, assignment"""
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
 
 
-# 3
+"""3 lines: For loop, built-in enumerate function, new style formatting"""
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print("iteration {iteration} is {name}".format(iteration=i, name=name))
 
 
-# 4
+"""4 lines: Fibonacci, tuple assignment"""
 parents, babies = (1, 1)
 while babies < 100:
     print('This generation has {0} babies'.format(babies))
     parents, babies = (babies, parents + babies)
 
 
-# 5
+"""5 lines: Functions"""
 def greet(name):
     print('Hello', name)
 
@@ -36,7 +36,7 @@ greet('Jill')
 greet('Bob')
 
 
-# 6
+"""6 lines: Import, regular expressions"""
 for test_string in ['555-1212', 'ILL-EGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print(test_string, 'is a valid US local phone number')
@@ -44,7 +44,7 @@ for test_string in ['555-1212', 'ILL-EGAL']:
         print(test_string, 'rejected')
 
 
-# 7
+"""7 lines: Dictionaries, generator expressions """
 prices = {'apple': 0.40, 'banana': 0.50}
 my_purchase = {
     'apple': 1,
@@ -54,7 +54,7 @@ grocery_bill = sum(prices[fruit] * my_purchase[fruit]
 print('I owe the grocer $%.2f' % grocery_bill)
 
 
-# 8
+"""8 lines: Command line arguments, exception handling"""
 # This program adds up integers that have been passed as arguments in the command line
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
@@ -63,7 +63,7 @@ except ValueError:
     print('Please supply integer arguments')
 
 
-# 9
+"""9 lines: Opening files   """
 # indent your Python code to put into an email
 # glob supports Unix style pathname extensions
 python_files = glob.glob('*.py')
@@ -75,7 +75,7 @@ for file_name in sorted(python_files):
     print()
 
 
-# 10
+"""10 lines: Time, conditionals, from..import, for..else"""
 activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
@@ -92,7 +92,7 @@ else:
     print('Unknown, AFK or sleeping!')
 
 
-# 11
+"""11 lines: Triple-quoted strings, while loop"""
 REFRAIN = '''
 %d bottles of beer on the wall,
 %d bottles of beer,
